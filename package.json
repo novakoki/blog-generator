@@ -1,0 +1,26 @@
+{
+  "name": "blog-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novakoki/blog-generator.git"
+  },
+  "author": "Ziqi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/novakoki/blog-generator/issues"
+  },
+  "homepage": "https://github.com/novakoki/blog-generator#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "jade": "^1.11.0",
+    "jstransformer-markdown-it": "^0.2.2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "My Blog",
+  "tags": [
+    "Home",
+    "Archieve",
+    "About"
+  ],
+  "description": "Hello, world",
+  "author": "Ziqi",
+  "intro": "Web Developer" 
+}

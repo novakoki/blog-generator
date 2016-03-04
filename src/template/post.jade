@@ -1,0 +1,15 @@
+doctype html
+html
+  include ./layout/head.jade
+  body    
+    include ./layout/header.jade
+    article
+      include:markdown-it ../posts/article.md
+    div#info
+      img(src= "./images/400.jpg")
+      h3= author
+      p= intro
+      i(class="fa fa-github fa-2x")
+      i(class="fa fa-weibo fa-2x")
+      i(class="fa fa-douban fa-2x")
+    include ./layout/footer.jade   
