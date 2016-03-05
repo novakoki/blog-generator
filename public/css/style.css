@@ -2,8 +2,16 @@ body, h1, p, ul, li, pre, header, footer {
   margin: 0;
   padding: 0; }
 
+ul {
+  list-style: none; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black; }
+
 body {
-  font-family: Roboto, Open Sans;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   max-width: 1000px;
   margin: 0px auto;
   background-color: antiquewhite; }
@@ -11,71 +19,82 @@ body {
 header {
   min-width: 300px;
   margin-top: 30px; }
-
-#main-title, #description {
-  text-align: center; }
-
-#main-title {
-  font-size: 50px;
-  font-weight: bold;
-  margin: 10px auto; }
-
-#description {
-  font-size: 20px; }
+  header h1, header p {
+    text-align: center; }
+  header h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px auto; }
+  header p {
+    font-size: 20px; }
 
 nav {
-  height: 50px;
+  height: 60px;
   border-top: 1px #666666 solid;
   border-bottom: 1px #666666 solid;
   margin: 40px auto; }
-
-nav li {
-  float: left; }
-
-nav ul {
-  list-style: none;
-  height: 50px;
-  padding: 1px 40px; }
-
-nav li a {
-  display: inline-block;
-  text-decoration: none;
-  margin: auto 20px;
-  height: 50px;
-  line-height: 50px;
-  color: black; }
+  nav ul {
+    list-style: none;
+    height: 60px;
+    padding: 1px 40px; }
+    nav ul li {
+      float: left; }
+      nav ul li a {
+        margin: auto 20px;
+        height: 60px;
+        line-height: 60px; }
 
 article {
   max-width: 670px;
   margin: 10px 20px;
   padding: 0px 25px; }
+  article p {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    line-height: 1.58;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.003em;
+    margin: 20px auto;
+    word-wrap: break; }
 
-article p {
-  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-  line-height: 1.58;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -.003em;
-  margin: 20px auto;
-  word-wrap: break; }
+.post {
+  display: block;
+  margin: 20px auto; }
+  .post p {
+    font-size: 18px; }
+  .post h1 {
+    font-size: 25px; }
 
-img {
-  width: 180px;
-  height: 180px;
+#info img {
   border-radius: 50%; }
+
+#info i {
+  margin: 20px 10px; }
+
+#info #recent {
+  margin: 30px auto;
+  border-top: 1px #666666 dashed; }
+  #info #recent ul li {
+    margin: 10px; }
+    #info #recent ul li a {
+      text-decoration: underline;
+      font-size: 18px; }
 
 @media (min-width: 1000px) {
   article {
     float: left;
     border-right: 1px #666666 dashed; }
-  article h1 {
-    font-size: 35px; }
-  article p {
-    font-size: 21px; }
+    article h1 {
+      font-size: 35px; }
+    article p {
+      font-size: 21px; }
   #info {
     float: right;
     width: 200px;
-    margin: 10px auto; } }
+    margin: 10px auto; }
+    #info img {
+      width: 180px;
+      height: 180px; } }
 
 @media (max-width: 1000px) {
   article h1 {
@@ -85,10 +104,19 @@ img {
   #info {
     margin: 30px 40px;
     height: 200px; }
-  img {
-    float: left;
-    margin: 0px 30px; } }
+    #info img {
+      float: left;
+      width: 150px;
+      height: 150px;
+      margin: 0px 40px; }
+    #info #recent {
+      border-top: 1px #666666 dashed; }
+  #recent {
+    clear: both;
+    padding-left: 60px; } }
 
 footer {
   clear: both;
-  border-top: 1px black dashed; }
+  border-top: 1px #666666 dashed; }
+  footer h5 {
+    text-align: center; }

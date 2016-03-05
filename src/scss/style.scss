@@ -1,126 +1,192 @@
+@import "varibles";
+
 body, h1, p, ul, li, pre, header, footer { 
   margin: 0;
   padding: 0; 
 }
 
+ul {
+  list-style: none;  
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $font-color;
+}
+
 body {
-  font-family: Roboto, Open Sans;
-  max-width: 1000px;
+  font-family: $main-font-family;
+  max-width: $body-width;
   margin: 0px auto;
-  background-color: antiquewhite;
+  background-color: $bg-color;
 }
 
 header {
-  min-width: 300px;
+  min-width: $header-min-width;
   margin-top: 30px;
-}
-
-#main-title, #description {
-  text-align: center;
-}
-
-#main-title {
-  font-size: 50px;
-  font-weight: bold;
-  margin: 10px auto;
-}
-
-#description {
-  font-size: 20px;
+  
+  h1, p {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: $blog-title-size;
+    font-weight: bold;
+    margin: 10px auto;
+  }
+  
+  p {
+    font-size: $blog-description-size;
+  }
 }
 
 nav {
-  height: 50px;
-  border-top: 1px #666666 solid;
-  border-bottom: 1px #666666 solid;
+  height: $nav-height;
+  border-top: $nav-dividing-line;
+  border-bottom: $nav-dividing-line;
   margin: 40px auto;
-}
-
-nav li {
-  float:left;
-}
-
-nav ul {
-  list-style: none;
-  height: 50px;
-  padding: 1px 40px;
-}
-
-nav li a {
-  display: inline-block;
-  text-decoration: none;
-  margin: auto 20px;
-  height: 50px;
-  line-height: 50px;
-  color: black;
+  
+  ul {
+    list-style: none;
+    height: $nav-height;
+    padding: 1px 40px;
+    
+    li {
+      float: left;
+      
+      a {
+        margin: auto 20px;
+        height: $nav-height;
+        line-height: $nav-height;
+      }
+    }    
+  } 
 }
 
 article {
-    max-width: 670px;
-    margin: 10px 20px;
-    padding: 0px 25px;
-}
-
-article p {
-    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  max-width: $article-width;
+  margin: 10px 20px;
+  padding: 0px 25px;
+  
+  p {
+    font-family: $article-font-family;
     line-height: 1.58;
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.003em;
     margin: 20px auto;
     word-wrap: break;
+  }
 }
 
-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+.post {
+  display: block;
+  margin: 20px auto;
+  p {
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: 25px;
+  }
 }
+
+#info {
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  i {
+    margin: 20px 10px;
+  }
+  
+  #recent {
+    margin: 30px auto;
+    border-top: $center-dividing-line;
+    ul {
+      li {
+        margin: 10px;        
+        a {
+          text-decoration: underline;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+
 
 @media (min-width: 1000px) {
   article {
     float: left;
-    border-right: 1px #666666 dashed;
+    border-right: $center-dividing-line;
+    
+    h1 {
+      font-size: $desktop-article-title-size;
+    }
+    
+    p {
+      font-size: $desktop-article-paragraph-size;
+    }
   }
-
-  article h1 {
-    font-size: 35px;
-  }
-
-  article p {
-    font-size: 21px;
-  }
-  
+ 
   #info {
     float: right;
-    width: 200px;
+    width: $desktop-info-width;
     margin: 10px auto;
+    
+    img {
+      width: $desktop-avatar-width;
+      height: $desktop-avatar-height;
+    }
   }
-
 }
 
 @media (max-width: 1000px) {
-  article h1 {
-    font-size: 30px;
-  }
-  
-  article p {
-    font-size: 18px;
-  }
-  
+  article{
+    h1 {
+      font-size: $mobile-article-title-size;
+    }
+    
+    p {
+      font-size: $mobile-article-paragraph-size;
+    }
+    
+   
+  } 
+ 
   #info {
     margin: 30px 40px;
-    height: 200px;
+    height: $mobile-info-height;
+    
+    
+    img {
+      float: left;
+      width: $mobile-avatar-width;
+      height: $mobile-avatar-height;
+      margin: 0px 40px;
+    }
+    
+     #recent {
+      border-top: $center-dividing-line;
+    }
   }
   
-  img {
-    float: left;
-    margin: 0px 30px;
-  }
-  
+  #recent {
+    clear: both;
+    padding-left: 60px; 
+  }  
+    
 }
 
 footer {
   clear: both;
-  border-top: 1px black dashed;
+  border-top: $footer-divding-line;
+  
+  h5 {
+    text-align: center;
+  }
 }

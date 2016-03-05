@@ -1,0 +1,4 @@
+# Hi
+
+I still remember the first time I encountered African wildlife in their native habitat. I was staying at the Sabi camp in South Africa. We set out on foot at the crack of dawn and — even though it was a quarter century ago — I remember that walk with the ranger like it was yesterday. The elephants. The hippos. The lions. And as many times as I’ve seen Mother Nature at work, I’ve never lost that initial sense of awe at the power of these amazing creatures. But as I’ve come to learn, there is also fragility.
+Today is World Wildlife Day and it is an important wake up call for all of us. We need to understand more about what would happen if thousands of species were to go extinct.

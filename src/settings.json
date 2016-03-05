@@ -1,0 +1,14 @@
+{
+  "title": "My Blog",
+  "tags": [
+    "Home",
+    "Archieve",
+    "About"
+  ],
+  "description": "Hello, world",
+  "author": "Ziqi",
+  "intro": "Web Developer",
+  "avatar": "images/avatar.jpg",
+  "github": "https://github.com/novakoki",
+  "weibo": "http://weibo.com/shaoziqi0628"
+}

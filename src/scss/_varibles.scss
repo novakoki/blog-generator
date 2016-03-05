@@ -1,0 +1,38 @@
+//colors
+$bg-color: antiquewhite;
+$font-color: black;
+$dividing-line-color: #666666;
+
+//block size
+$body-width: 1000px;
+$header-min-width: 300px;
+$nav-height: 60px;
+$article-width: 670px;
+$footer-height: 200px;
+$dividing-line-size: 1px;
+$desktop-info-width: 200px;
+$mobile-info-height: 200px;
+$desktop-avatar-width: 180px;
+$desktop-avatar-height: 180px;
+$mobile-avatar-width: 150px;
+$mobile-avatar-height: 150px;
+
+//font family
+$main-font-family: ("Segoe UI", Roboto,Oxygen ,Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+$article-font-family: (Georgia, Cambria, "Times New Roman", Times,serif);
+
+//font size
+$blog-title-size: 50px;
+$blog-description-size: 20px;
+$desktop-article-title-size: 35px;
+$desktop-article-paragraph-size: 21px;
+$mobile-article-title-size: 30px;
+$mobile-article-paragraph-size: 18px;
+
+//dividing line style
+$nav-dividing-line: $dividing-line-size $dividing-line-color solid;
+$center-dividing-line: $dividing-line-size $dividing-line-color dashed;
+$footer-divding-line: $dividing-line-size $dividing-line-color dashed;
+
+//media query
+$desktop-min-screen-width: 1000px;
