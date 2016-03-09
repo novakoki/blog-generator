@@ -1,10 +1,16 @@
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
+  babel = require('gulp-babel'),
+  babelify = require('babelify'),
+  browserify = require('browserify'),
+  // source = require('vinyl-source-stream'),
+  // buffer = require('vinyl-buffer'),
+  // uglify = require('gulp-uglify'),
+  // sourcemaps = require('gulp-sourcemaps'),
+  // gutil = require('gulp-util'),
   jade = require('gulp-jade'),
   marked = require('gulp-markdown'),
   settings = require('./src/settings.json'),
-  route_table = require('./src/js/route_table.json'),
-  gulpBrowser = require('gulp-browser'),
   fs = require('fs');
 
 gulp.task('template', function () {
@@ -28,23 +34,24 @@ gulp.task('style', function () {
     .pipe(gulp.dest('./public/css/'));
 });
 
-gulp.task('route', function () {
-  fs.readdir('./src/posts', function (err, files) {
-    for (var filename of files) {
-      var date = fs.statSync('./src/posts/'+filename)['atime'];
-      route_table[filename.split('.')[0]] = {"date" : date};
-      fs.writeFileSync('./src/js/route_table.json', JSON.stringify(route_table), 'utf-8');
-    }
-  }); 
+gulp.task('javascript', function () {
+  browserify({entries: './src/js/app.js', debug: true})
+    .bundle()
+    .pipe(source('app.js'))
+    .pipe(gulp.dest('./public/js'));
 });
 
-gulp.task('browserify', function () {
-  gulp.src('./src/js/*.js')
-    .pipe(gulpBrowser.browserify())
-    .pipe(gulp.dest('./public/js'))
-})
+gulp.task('route', function () {
+  // fs.readdir('./src/posts', function (err, files) {
+  //   for (var filename of files) {
+  //     var date = fs.statSync('./src/posts/'+filename)['atime'];
+  //     route_table[filename.split('.')[0]] = {"date" : date};
+  //     fs.writeFileSync('./src/js/route_table.json', JSON.stringify(route_table), 'utf-8');
+  //   }
+  // });
+});
 
-gulp.task('build', ['template', 'style', 'markdown', 'route', 'browserify'], function () {
+gulp.task('build', ['template', 'style', 'markdown', 'route', 'javascript'], function () {
   gulp.src('./src/images/*')
     .pipe(gulp.dest('./public/images'))
 });
@@ -57,9 +64,9 @@ gulp.task('watch', function () {
 });
 
 gulp.task('test', function () {
-    
+
 });
 
 gulp.task('deploy', function () {
-    
+
 });
