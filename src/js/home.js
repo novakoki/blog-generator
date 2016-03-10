@@ -8,8 +8,8 @@ export function handler (request) {
     var post = document.createElement('a');
     post.className = 'post';
     post.href = `#post/${name}`;
-    ajax.get(`posts/${name}.html`,  (function (postCopy) {
-      return function (response) {      
+    ajax.get(`posts/${name}.html`,  ( postCopy => {
+      return response => {      
         var html = response.substr(0, 300);
         postCopy.innerHTML = html.length < 300 ? html : html + '...';
         article.appendChild(postCopy);

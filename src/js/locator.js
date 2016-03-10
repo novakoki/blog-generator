@@ -1,4 +1,5 @@
 export function start (handler) {
+  window.onload = handler;
   window.onhashchange = handler;
 };
 
