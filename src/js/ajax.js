@@ -1,6 +1,6 @@
 export function get (url, success, error) {
   var httpRequest = new XMLHttpRequest();
-  httpRequest.onreadystatechange = function() {
+  httpRequest.onreadystatechange = () => {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         success(httpRequest.responseText);
