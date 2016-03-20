@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "blog": "blog"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/novakoki/blog-generator.git"
@@ -28,7 +31,8 @@
     "gulp-uglify": "^1.5.3",
     "jade": "^1.11.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "yargs": "^4.3.2"
   },
   "devDependencies": {},
   "browserify": {
