@@ -1,10 +1,10 @@
 {
   "title": "My Blog",
-  "tags": [
-    "Home",
-    "Archieve",
-    "About"
-  ],
+  "tags": {
+    "Home": "#",
+    "Archieve": "archieve",
+    "About": "about"
+  },
   "description": "Hello, world",
   "author": "Ziqi",
   "intro": "Web Developer",

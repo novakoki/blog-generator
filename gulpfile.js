@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
   sass = require('gulp-sass'),
   babelify = require('babelify'),
   browserify = require('browserify'),
@@ -39,17 +39,11 @@ gulp.task('javascript', function () {
     .pipe(gulp.dest('./public/js'));
 });
 
-gulp.task('route', function () {
-  // fs.readdir('./src/posts', function (err, files) {
-  //   for (var filename of files) {
-  //     var date = fs.statSync('./src/posts/'+filename)['atime'];
-  //     route_table[filename.split('.')[0]] = {"date" : date};
-  //     fs.writeFileSync('./src/js/route_table.json', JSON.stringify(route_table), 'utf-8');
-  //   }
-  // });
-});
+// gulp.task('route', function () {
+  
+// });
 
-gulp.task('build', ['template', 'style', 'markdown', 'route', 'javascript'], function () {
+gulp.task('generate', ['template', 'style', 'markdown', 'route', 'javascript'], function () {
   gulp.src('./src/images/*')
     .pipe(gulp.dest('./public/images'))
 });
