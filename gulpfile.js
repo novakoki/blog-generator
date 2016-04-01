@@ -3,8 +3,8 @@ const gulp = require('gulp'),
   babelify = require('babelify'),
   browserify = require('browserify'),
   source = require('vinyl-source-stream'),
-  // buffer = require('vinyl-buffer'),
-  // uglify = require('gulp-uglify'),
+  buffer = require('vinyl-buffer'),
+  uglify = require('gulp-uglify'),
   // sourcemaps = require('gulp-sourcemaps'),
   jade = require('gulp-jade'),
   marked = require('gulp-markdown'),
@@ -36,6 +36,8 @@ gulp.task('javascript', function () {
   browserify({entries: './src/js/app.js', debug: true})
     .bundle()
     .pipe(source('app.js'))
+    .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest('./public/js'));
 });
 
