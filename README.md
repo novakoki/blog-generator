@@ -13,8 +13,8 @@ npm install -g gulp-cli
 
 Usage
 ===
-To use command line tool
 ```sh
+npm install
 npm link
 ```
 
