@@ -3,6 +3,6 @@ header
   p= description
   nav
     ul
-      for tag in tags
+      for link, tag in tags
         li
-          a(href="#")= tag
+          a(href=link)= tag

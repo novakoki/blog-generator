@@ -1,3 +1,5 @@
 extends ./layout/layout.jade
 block content
-  | #{article}
+  article !{article}
+block disqus
+  include ./layout/disqus.jade

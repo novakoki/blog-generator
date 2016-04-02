@@ -1,2 +1,0 @@
-# My Wildlife Worries
-Since beginning this project in 2005, Joel has traveled around the world and completed portraits of more than 5,000 species, most photographed on either a plain black or white background. 

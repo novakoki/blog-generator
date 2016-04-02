@@ -9,4 +9,7 @@ div#info
   div#recent
     h2 Recent Posts
     ul
+      for link, post in recent_posts
+        li
+          a(href=link)= post
         

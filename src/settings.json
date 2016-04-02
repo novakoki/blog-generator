@@ -1,14 +1,18 @@
 {
-  "title": "My Blog",
-  "tags": {
-    "Home": "#",
-    "Archieve": "archieve",
-    "About": "about"
-  },
-  "description": "Hello, world",
-  "author": "Ziqi",
-  "intro": "Web Developer",
-  "avatar": "images/avatar.jpg",
-  "github": "https://github.com/novakoki",
-  "weibo": "http://weibo.com/shaoziqi0628"
+    "title": "My Blog",
+    "tags": {
+        "Home": "/",
+        "Archieve": "/archieve/",
+        "About": "/about/"
+    },
+    "articles": {},
+    "recent_posts": {},
+    "description": "Hello, world",
+    "author": "Ziqi",
+    "intro": "Web Developer",
+    "avatar": "/images/avatar.jpg",
+    "github": "https://github.com/novakoki",
+    "weibo": "http://weibo.com/shaoziqi0628",
+    "disqus": "novakoki",
+    "content": ""
 }
